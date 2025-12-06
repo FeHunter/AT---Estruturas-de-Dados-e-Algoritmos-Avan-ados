@@ -44,14 +44,36 @@ ex_09::::::::::::::::::::::
 Este problema pode ser resolvido com a árvore geradora mínima, quando temos uma arvore geradora podemos usar o Kruskal para resolver.
 
 ex_10::::::::::::::::::::::
+Vamos precisar saber quais arestas são validas com base na altura, depois encontrar os componentes conexas usando a propagação dos rótulos/cidades.
+Cada vértice vai iniciar com seu rotulo/cidade e para cada aresta trafegável se o peso for menor ou igual ao limite e se os rótulos forem diferentes vamos trocar o rotulo maior pelo menor, repetindo até nenhuma alteração acontecer mais.
+
+ex_11::::::::::::::::::::::
+Exercício complexo... usando o Dijkstra para saber o caminho mais rápido de dahi até naur. Então Usando permutations para força o caminho mais rápido que passa por todas as cidades e voltar até cerf
+Usando PRIM temos uma arvore geradora minima para pegar o custo das linhas. Depois usamos a cobertura gulosa para escolher as vertices que cobrem todas as arestas tentando passar pelo menor numero de galpões e comparar com o mínimo da força bruta.
 
 
+ex_12::::::::::::::::::::::
+A) Dijkstra para encontrar o caminho mais curto entre os vertices é um algoritmo de classe polinomial porque o algoritmo tem um tempo polinomial em relação ao tamanho do grafo e sua complexidade em big O seria O(E + V log v).
+B) O problema do caixeiro viajante encontra o ciclo de custo mínimo seria um problema np-hard, a razão pratica resolver por força bruta requer checar todas as combinações de cidades isso faz com que complexidade serja O(n x n) porque vai depender do tamanho dos dados passados.
+C) Este exercício foi sobre a arvore geradora minima, é também da classe polinomial, para encontrar a arvore temos algoritmos como o Prim o Kruskal e suas complexidades sendo O(E lob V) no prim e O(E log E) no Kruskal.
+D) Não sei bem aqui, mas acredito que seja np-hard porque vamos precisar verificar todas as possibilidades chegando todas as alternativas de caminho, seguindo este pensamento a notação big O seria O(n) porque também dependeria da quantidade de dados passados.
+E) Como a ordem das visitas estão fixas, iniciando de A para B então C e depois voltando, podemos utilizar o Dijkstra para solucionar o problema, cada chamada para seria também executado em tempo polinomial.
+
+Fonte de referência para a questão:
+Vídeo sobre Dijsktra: https://youtu.be/ftYNBrMVOYQ
+Playlist de algoritmos: https://www.youtube.com/playlist?list=PLrmLmBdmIlpu2f2g8ltqaaCZiq6GJvl1j
+Post: https://www.puppygraph.com/blog/graph-algorithms
+
+ex_13::::::::::::::::::::::
 
 
+ex_14::::::::::::::::::::::
+Para corrigir a função podemos fazer um único loop linear, para isso podemos também aplicar a formula (soma_total = N.(N+1) / 2) porque vamos ter a soma de 0 a N. Depois somamos a array com o método sum(array) e no final retornamos soma total - soma_array
 
+ex_15::::::::::::::::::::::
+Para corrigir a função precisamos considerar que o maior produto pode vir dos dois maiores positivos ou dos menores negativos. A função corrigida esta comparando os valores e no final multiplicar os valores e retorna o produto dos maiores positivos e negativos.
 
-
-
-
+ex_16::::::::::::::::::::::
+Para melhorar esta função podemos criar um dicionário para guarda a contagem de quantas vezes cada elemento aparece na array e fazemos um outro para contar quantas vezes cada elemento aparece na outra array também. No final comparamos os dois e não mais comparamos cada item dos dois arrays.
 
 
