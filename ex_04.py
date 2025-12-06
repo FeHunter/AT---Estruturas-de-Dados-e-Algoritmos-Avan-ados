@@ -102,8 +102,6 @@ amigos.adiciona_aresta(stella, jamal)
 
 amigos.desenha()
 
-# amigos.desenha()
-
 # print("Amigos de Alice:", alice.vizinhos)
 
 seguidos = Grafo(direcionado=True)
