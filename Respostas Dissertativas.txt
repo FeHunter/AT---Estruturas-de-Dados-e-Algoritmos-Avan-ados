@@ -1,30 +1,41 @@
-ex_01 - A:
+ex_01 - A:::::::::::::::::::::::
 Para descobrir a quantidade de níveis do heap, vou utilizar a formula: níveis = [log2(tamanho)] + 1
 Esta formula segue O(1) porque, não vamos percorre a lista apenas pegar o seu tamanho e fazer um calculo de soma.
 
-ex_01 - B:
+ex_01 - B:::::::::::::::::::::::
 A função vai conferir se o heap atual e do passado como argumentos são iguais, se não for vamos lançar uma exceção porque heaps diferentes não podem ser mesclados.
 Depois a função deve percorre todos os elementos do segundo heap e inserir no heap atual usando o insere() e por fim esvaziar o segundo heap.
 
-ex_02:
+ex_02:::::::::::::::::::::::
 Aqui foi criado dois heaps com a mesma função chave que vai priorizar a maior gravidade e para desempatar usar a menor data/hora.
 Depois inserimos todos os pacientes da lista nas suas filas, depois vamos mesclar as duas listas e esvaziar o segundo o heap.
 Depois chamados níveis para pegar a quantidade de níveis do heap mesclado, no fim nós mostramos o heap visual.
 
-ex_03:
+ex_03:::::::::::::::::::::::
 Para o autocompletar a string digitada existe como prefixo na trie, então o método vai pegar todas as palavras que começam com esse prefixo e ordenar pela frequência. Depois retorna somente as mais frequentes limitado pelo parâmetro max_sugestoes.
 No autocorreção se a string não tiver na trie, o método vai procurar pelo prefixo mais longo que existir na trie, depois recuperar todas as palavras que compartilham esse prefixo e retorna as mais frequentes também limitado pelo max_sugestoes.
 
-ex_04:
+ex_04:::::::::::::::::::::::
 Para permitir que a classe aceite os dois tipos de grafos de uma só vez, temos que modificar para adicionar um atributo 'direcionado' na classe para alterar a construção da aresta para os dois tipos de grafos, a classe vai escolher o tipo de grafo para passar no networkX para ser desenhado o grafo.
 Se for direcionado, vamos adicionar v2 em v1. Se não-direcionado adicionar v2 em v1 e v1 no v2.
 
-ex_05:
-Temos algumas diferenças entre grafos direcionados e não direcionados, no não-direcionado cada aresta esta ligada ambos os lados, já no direcionado cada aresta tem direção. Isso altera completamente a ordem de visitação em DFS e os caminhos possíveis. 
+ex_05:::::::::::::::::::::::
+Temos algumas diferenças entre grafos direcionados e não direcionados, no não-direcionado cada aresta esta ligada ambos os lados, já no direcionado cada aresta tem direção. Isso altera completamente a ordem de visitação em DFS e os caminhos possíveis.
+Na travessa DFS busca em profundidade sempre segue o proximo vizinho até não pode mais, BFS busca em largura os primeiros vizinho e depois os vizinhos dos vizinhos.
 
+ex_06::::::::::::::::::::::
+Este é um problema de Árvore Geradora Mínima porque temos um conjunto de pontos que seriam os reservatórios que precisamos conectar minimizando os custos das conexões.
 
+Podemos representar com um grafo não direcionado e ponderado, onde cada nó seria os reservatórios, as arestas seriam as conexões e o peso o custo da obra.
 
+Reservatórios: r1, r2, r3, r4...
 
+Arestas: (r1-r2, custo=1), (r2-r3, custo=2)...
+
+Temos duas opções de algoritmos para utilizar o Kruskal e o Pim. Vou utilizar o Kruskal que já usei antes e tenho mais afinidade. O Kruskal tem uma complexidade de O(V log V) onde o V é as arestas.
+
+ex_07::::::::::::::::::::::
+Este problema pode ser resolvido com BFS porque o tabuleiro é uma grafo de 8x8 cada casa é um nó e os movimentos podem ser as arestas, então aplicando o algoritmo de BFS podemos resolver o problema.
 
 
 
