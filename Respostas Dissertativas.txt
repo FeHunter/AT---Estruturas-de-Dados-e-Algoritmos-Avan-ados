@@ -37,5 +37,8 @@ Temos duas opções de algoritmos para utilizar o Kruskal e o Pim. Vou utilizar 
 ex_07::::::::::::::::::::::
 Este problema pode ser resolvido com BFS porque o tabuleiro é uma grafo de 8x8 cada casa é um nó e os movimentos podem ser as arestas, então aplicando o algoritmo de BFS podemos resolver o problema.
 
+ex_08::::::::::::::::::::::
+Basicamente podemos usar novamente BFS ou DFS para explorar as areas em branca percorrendo cada parte do mapa e sempre que encontrarmos um area em branco vamos adicionar um valor em um contador de cliques, então usamos BFS/DFS para marca as areas como visitadas. Depois só continuar até visitar toda a imagem.
+
 
 
