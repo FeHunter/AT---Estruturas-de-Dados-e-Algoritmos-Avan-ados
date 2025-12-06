@@ -1,0 +1,9 @@
+ex_01:
+Para descobrir a quantidade de níveis do heap, vou utilizar a formula: níveis = [log2(tamanho)] + 1
+Esta formula segue O(1) porque, não vamos percorre a lista apenas pegar o seu tamanho e fazer um calculo de soma.
+
+ex_02:
+A função vai conferir se o heap atual e do passado como argumentos são iguais, se não for vamos lançar uma exceção porque heaps diferentes não podem ser mesclados.
+Depois a função deve percorre todos os elementos do segundo heap e inserir no heap atual usando o insere() e por fim esvaziar o segundo heap.
+
+ex_03:
