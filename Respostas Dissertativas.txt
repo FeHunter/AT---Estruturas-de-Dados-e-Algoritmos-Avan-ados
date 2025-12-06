@@ -16,4 +16,7 @@ Para o autocompletar a string digitada existe como prefixo na trie, então o mé
 No autocorreção se a string não tiver na trie, o método vai procurar pelo prefixo mais longo que existir na trie, depois recuperar todas as palavras que compartilham esse prefixo e retorna as mais frequentes também limitado pelo max_sugestoes.
 
 ex_04:
+Para permitir que a classe aceite os dois tipos de grafos de uma só vez, temos que modificar para adicionar um atributo 'direcionado' na classe para alterar a construção da aresta para os dois tipos de grafos, a classe vai escolher o tipo de grafo para passar no networkX para ser desenhado o grafo.
+Se for direcionado, vamos adicionar v2 em v1. Se não-direcionado adicionar v2 em v1 e v1 no v2.
+
 
