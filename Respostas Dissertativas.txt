@@ -65,6 +65,9 @@ Playlist de algoritmos: https://www.youtube.com/playlist?list=PLrmLmBdmIlpu2f2g8
 Post: https://www.puppygraph.com/blog/graph-algorithms
 
 ex_13::::::::::::::::::::::
+b) A função inicia em um ponto onde escolhe sempre o vértice mais perto que ainda não foi visitado e repete até visitar todos. Depois volta pro inicio e repete isso até todos os pontos comparando os tempos totais e retorna a melhor retor com o menor custo.
+Complexidade:
+Achei bem confuso a análise da complexidade dessa função, mas acredito que seja O(nx2), mas não tenho certeza porque o loop procura os vizinhos não visitados e como esse numero diminui a cada interação seria uma vértice n a menos.
 
 
 ex_14::::::::::::::::::::::
@@ -77,3 +80,57 @@ ex_16::::::::::::::::::::::
 Para melhorar esta função podemos criar um dicionário para guarda a contagem de quantas vezes cada elemento aparece na array e fazemos um outro para contar quantas vezes cada elemento aparece na outra array também. No final comparamos os dois e não mais comparamos cada item dos dois arrays.
 
 
+
+Material de referencia:
+
+Vídeo sobre grafos:
+https://youtu.be/nPXcXATBCNU
+
+Post sobre algoritmos (grafos):
+https://www.scribd.com/document/862435396/Graph-Algorithms-Study-Guide
+
+Livro sobre grafos:
+https://www.oreilly.com/library/view/algoritmos-de-grafos/9798341642805/?utm_source=chatgpt.com
+
+Alguns insigts de IA - alguns exercícios que tive dificuldades:
+
+ex 8:
+BFS ou DFS para explorar cada região branca:
+Percorrer cada célula do mapa.
+Sempre que encontrar um "." NÃO visitado, significa:
+achamos uma nova região branca
+aumentamos o contador de cliques
+fazemos BFS/DFS para marcar toda essa região como visitada
+Continuar até explorar a imagem inteira.
+
+ex 9:
+Árvore Geradora Mínima (Minimum Spanning Tree — MST)
+As duas técnicas clássicas para resolver MST são:
+Kruskal (ordenar arestas + Union-Find)
+Prim (expande a partir de um vértice)
+Como o grafo é pequeno, qualquer uma funciona, mas Kruskal é mais direto.
+
+ex 13:
+Fiz um aleitura do grafo de mordor e pedi pro gpt transcrever para matriz em python:
+Leitura do grafo:
+1 (1, 2 = 4), (1, 5 = 5)
+2 (2, 1 = 4), (2, 5 = 4), (2, m = 3)
+3 (3, m = 4), (3, 4 = 5), (3, 8 = 5), (3, 10 = 3)
+4 (4, 3 = 5), (4, 10 = 4)
+5 (5, 1 = 5), (5, 2 = 4), (5, m = 6), (5, 8 = 5), (5, 6 = 2)
+6 (6, 5 = 2), (6, 8 = 4), (6, 7 = 4)
+7 (7, 6 = 4), (7, 8 = 3), (7, 9 = 4)
+8 (8, 3 = 5), (8, 5 = 5), (8, 6 = 4), (8, 7 = 3), (8, 10 = 3)
+9 (9, 7 = 4), (9, 11 = 3)
+10 (10, 3 = 3), (10, 4 = 4), (10, 8 = 3), (10, 11 = 3)
+11 (11, 9 = 3), (11, 10 = 3)
+
+ex 16:
+Podemos fazer assim:
+Criar um dicionário contando quantas vezes cada elemento aparece em array1.
+Fazer um segundo dicionário contando quantas vezes cada elemento aparece em array2.
+
+Comparar os dois dicionários.
+Cada uma dessas etapas percorre os arrays uma vez:
+➡️ O(N) + O(M)
+➡️ Complexidade final: O(N + M) ✔️
